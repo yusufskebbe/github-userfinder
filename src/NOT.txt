@@ -1,0 +1,51 @@
+1) constructor runs when componenet rendered
+
+2)constructor must have super() function which point on the father componenet
+
+3) when can use style in componenet by addin style={{}} but without the - sections
+
+4)destructure: if we have objects in the state and we want to use the objects in the componenet we can destrcture the objects by using a const = {state objects} = this.state then we dont have to put this.state.objectName
+
+5) rec is class base componenet shortcut
+
+6) map() is high order map method and this take a callback function
+
+7) when we render a list we get error which is undefind key, we should declare key when we use list 
+
+8) if we want to use propsType in class base componenet we use "static defaultProps = {
+
+        title:"GitHub Finder",
+        icon:'fab fa-github'
+
+    }; 
+
+9) if we want to use propsType in functional componenet we put them under the return function with function name infront of the propType
+
+10) render is lifecyle method 
+    'componenetDidMount()' it is fired when the componenet Mount
+    when we want to make an http request we should do it here in this part 
+
+     componentDidMount(){
+
+    axios.get('https://api.github.com/users').then(res =>{
+    
+      console.log(res.data)
+
+    })
+
+  }
+
+    we can use something like above or
+
+
+    async componenetDidMount(){
+
+        const res = await axios.get('link')
+        clg(res.data)
+    }
+
+ 11) if we want to restore our secret keys or api's we use .env.local because when we deploy we don't want those information put on server
+
+ 12) this key word, works diffrenet in arrow function
+
+ 13) we use Link componenet to prevent lost data when we come back to to the router 
